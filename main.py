@@ -68,7 +68,7 @@ async def signup(user: UserLogin):
         # (This links the Auth ID to the nickname)
         user_id = auth_response.user.id
         supabase.table("profiles").insert({
-            "id": user_id, 
+            "id": user_id,
             "username": user.username
         }).execute()
         
